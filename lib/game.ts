@@ -32,15 +32,22 @@ export const computeVerdict = ({
 
   const roleLabel = roleMeta[role].label;
   const reasonBits = [
-    role === 'spectator' ? `The crowd yelled "${reaction ?? 'OBJECTION!'}".` : undefined,
-    argument ? `Statement on record: "${argument.slice(0, 90)}".` : undefined,
-    `Evidence tone favored ${outcome.label.toLowerCase()}.`,
+    role === 'spectator' ? `The crowd energy was "${reaction ?? 'OBJECTION!'}".` : undefined,
+    argument ? `Statement entered: "${argument.slice(0, 90)}".` : undefined,
+    outcome.id === caseData.canonicalVerdictId
+      ? caseData.canonicalVerdictRationale
+      : `Alternative ruling selected: ${outcome.label}.`,
   ].filter(Boolean);
 
   return {
     outcome,
-    headline: `${outcome.label} — Court Is In Session`,
+    headline:
+      outcome.id === caseData.canonicalVerdictId
+        ? caseData.canonicalVerdictHeadline
+        : `${outcome.label} — Court Is In Session`,
     reason: `${roleLabel} influence registered. ${reasonBits.join(' ')}`,
     confidence,
+    verdictClass: outcome.id === caseData.canonicalVerdictId ? caseData.canonicalVerdictClass : outcome.label,
+    sentence: outcome.id === caseData.canonicalVerdictId ? caseData.sentence : 'Sentence stayed pending on this alternate ruling.',
   };
 };

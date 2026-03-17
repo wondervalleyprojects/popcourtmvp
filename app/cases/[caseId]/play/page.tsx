@@ -34,12 +34,14 @@ export default function CasePlayPage() {
   return (
     <main className="space-y-4">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.2em] text-court-accent">Case Play</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-court-accent">Case Play · {caseData.category}</p>
         <h1 className="text-2xl font-black leading-tight">{caseData.title}</h1>
+        <p className="text-sm text-white/75">{caseData.coreQuestion}</p>
         <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs text-white/80">
           <span>{roleMeta[role].emoji}</span>
           <span className={roleMeta[role].color}>{roleMeta[role].label}</span>
         </p>
+        <p className="text-xs text-white/60">Values in tension: {caseData.valuesInTension.join(' • ')}</p>
         <p className="text-sm text-white/75">
           {!deliberationOpen ? 'Step 1: Review every receipt.' : 'Step 2: Make your move.'}
         </p>

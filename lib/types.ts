@@ -20,7 +20,10 @@ export type CaseData = {
   slug: string;
   title: string;
   subtitle: string;
+  category: string;
   premise: string;
+  coreQuestion: string;
+  valuesInTension: string[];
   tags: string[];
   evidence: EvidenceCard[];
   outcomes: OutcomeOption[];
@@ -30,6 +33,10 @@ export type CaseData = {
   };
   spectatorReactions: string[];
   canonicalVerdictId: string;
+  canonicalVerdictClass: string;
+  canonicalVerdictHeadline: string;
+  canonicalVerdictRationale: string;
+  sentence: string;
 };
 
 export type VerdictResult = {
@@ -37,4 +44,6 @@ export type VerdictResult = {
   headline: string;
   reason: string;
   confidence: number;
+  verdictClass: string;
+  sentence: string;
 };

@@ -8,7 +8,7 @@ export function ReplayActions({ caseId, role }: { caseId: string; role: string }
         <Button size="lg">Play Another Case 🔁</Button>
       </Link>
       <Link href={`/cases/${caseId}/roles`}>
-        <Button variant="secondary" size="lg">Switch Role in This Case</Button>
+        <Button variant="secondary" size="lg">Switch from {role} Role</Button>
       </Link>
     </div>
   );
