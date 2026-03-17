@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-court-bg bg-halo text-court-text;
+  min-height: 100vh;
+}
+
+main {
+  @apply mx-auto w-full max-w-md px-4 pb-10 pt-6;
+}
