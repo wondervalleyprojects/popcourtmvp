@@ -4,6 +4,10 @@ import { ReplayActions } from '@/components/verdict/ReplayActions';
 import { VerdictReveal } from '@/components/verdict/VerdictReveal';
 import { Button } from '@/components/ui/Button';
 import { getCaseById } from '@/data/cases';
+<<<<<<< HEAD
+import { roleMeta } from '@/data/roles';
+=======
+>>>>>>> origin/main
 import { computeVerdict } from '@/lib/game';
 import { Role } from '@/lib/types';
 
@@ -32,13 +36,25 @@ export default async function VerdictPage({
 
   return (
     <main className="space-y-4">
+<<<<<<< HEAD
+      <header className="space-y-2">
+        <p className="text-xs uppercase tracking-[0.2em] text-court-accent">Verdict Reveal</p>
+        <p className="text-sm text-white/75">
+          {roleMeta[role].emoji} {roleMeta[role].label} decision locked in.
+        </p>
+=======
       <header>
         <p className="text-xs uppercase tracking-[0.2em] text-court-accent">Verdict Reveal</p>
+>>>>>>> origin/main
       </header>
       <VerdictReveal verdict={verdict} />
       <ReplayActions caseId={caseData.id} role={role} />
       <Link href={`/cases/${caseData.id}/play?role=${role}`}>
+<<<<<<< HEAD
+        <Button variant="ghost">Re-open Evidence Board</Button>
+=======
         <Button variant="ghost">Review Evidence Again</Button>
+>>>>>>> origin/main
       </Link>
     </main>
   );

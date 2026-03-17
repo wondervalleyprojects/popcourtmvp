@@ -1,2 +1,2 @@
 export const appTagline = 'Pop culture gossip meets legal spectacle.';
-export const quickRules = 'Swipe evidence. Drop your take. Reveal the verdict.';
+export const quickRules = 'Tap through receipts. Choose your role. Slam the verdict.';

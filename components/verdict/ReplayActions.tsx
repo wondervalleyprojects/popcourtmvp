@@ -5,10 +5,10 @@ export function ReplayActions({ caseId, role }: { caseId: string; role: string }
   return (
     <div className="space-y-3">
       <Link href="/cases">
-        <Button>Next Case</Button>
+        <Button size="lg">Play Another Case 🔁</Button>
       </Link>
       <Link href={`/cases/${caseId}/roles`}>
-        <Button variant="secondary">Replay This Case as {role}</Button>
+        <Button variant="secondary" size="lg">Switch Role in This Case</Button>
       </Link>
     </div>
   );
