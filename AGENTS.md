@@ -92,6 +92,7 @@ Done means:
 - the verdict screen feels dramatic and shareable
 - the codebase is clean enough for a second iteration
 
+
 ## Workflow
 Before coding:
 1. inspect the repo
@@ -103,3 +104,10 @@ After coding:
 2. check for TypeScript errors
 3. check for obvious mobile UX issues
 4. update README with run instructions and next-step roadmap
+
+## Verification rules
+Before finishing, always run the app locally when possible and verify:
+- npm run build
+- npm run typecheck
+- npm run lint (if configured)
+If a verification step fails, explain why and either fix it or state exactly what remains.
