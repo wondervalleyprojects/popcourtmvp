@@ -7,10 +7,7 @@ import { EvidenceDeck } from '@/components/play/EvidenceDeck';
 import { RoleActionPanel } from '@/components/play/RoleActionPanel';
 import { Button } from '@/components/ui/Button';
 import { getCaseById } from '@/data/cases';
-<<<<<<< HEAD
 import { roleMeta } from '@/data/roles';
-=======
->>>>>>> origin/main
 import { Role } from '@/lib/types';
 
 const validRoles: Role[] = ['juror', 'judge', 'prosecutor', 'defense', 'spectator'];
@@ -36,7 +33,6 @@ export default function CasePlayPage() {
 
   return (
     <main className="space-y-4">
-<<<<<<< HEAD
       <header className="space-y-2">
         <p className="text-xs uppercase tracking-[0.2em] text-court-accent">Case Play</p>
         <h1 className="text-2xl font-black leading-tight">{caseData.title}</h1>
@@ -47,12 +43,6 @@ export default function CasePlayPage() {
         <p className="text-sm text-white/75">
           {!deliberationOpen ? 'Step 1: Review every receipt.' : 'Step 2: Make your move.'}
         </p>
-=======
-      <header className="space-y-1">
-        <p className="text-xs uppercase tracking-[0.2em] text-court-accent">Case Play</p>
-        <h1 className="text-2xl font-black">{caseData.title}</h1>
-        <p className="text-sm text-white/80">Review the evidence, then make your move as {role}.</p>
->>>>>>> origin/main
       </header>
 
       {!deliberationOpen ? (
